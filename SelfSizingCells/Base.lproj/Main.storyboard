@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14D72i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JVn-vI-OLh">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Self Sizing Cells!-->
+        <scene sceneID="jvh-0s-cAj">
+            <objects>
+                <tableViewController id="7sb-eB-EZK" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="waB-qb-oXf">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="sVw-gr-ZU8" customClass="ItemCell">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sVw-gr-ZU8" id="lI8-Nz-0lv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBo-0L-DQI">
+                                            <rect key="frame" x="15" y="11" width="570" height="20.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="cBo-0L-DQI" secondAttribute="trailing" constant="15" id="NDe-Ht-YpY"/>
+                                        <constraint firstItem="cBo-0L-DQI" firstAttribute="leading" secondItem="lI8-Nz-0lv" secondAttribute="leading" constant="15" id="Xey-ch-NQB"/>
+                                        <constraint firstItem="cBo-0L-DQI" firstAttribute="top" secondItem="lI8-Nz-0lv" secondAttribute="top" constant="11" id="v42-f8-PzX"/>
+                                        <constraint firstAttribute="bottom" secondItem="cBo-0L-DQI" secondAttribute="bottom" constant="12" id="yxw-JQ-ud8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="cBo-0L-DQI" id="d6Z-uh-BmK"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="7sb-eB-EZK" id="AZk-9u-MQm"/>
+                            <outlet property="delegate" destination="7sb-eB-EZK" id="Grc-bG-e6s"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Self Sizing Cells!" id="Eda-Yt-BJi"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="grZ-hy-bja" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1403" y="452"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6rd-Xe-Dds">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JVn-vI-OLh" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uDT-3x-BHV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7sb-eB-EZK" kind="relationship" relationship="rootViewController" id="Rzj-w9-Cdq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FdI-A0-wOC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="452"/>
+        </scene>
+    </scenes>
+</document>
