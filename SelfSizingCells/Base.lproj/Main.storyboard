@@ -34,6 +34,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="titleLabel" destination="cBo-0L-DQI" id="d6Z-uh-BmK"/>
+                                    <segue destination="T21-uO-zH9" kind="show" id="waB-2V-lhI"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -42,11 +43,35 @@
                             <outlet property="delegate" destination="7sb-eB-EZK" id="Grc-bG-e6s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Self Sizing Cells!" id="Eda-Yt-BJi"/>
+                    <navigationItem key="navigationItem" title="Self Sizing Cells!" id="Eda-Yt-BJi">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="bZ8-G4-tax">
+                            <connections>
+                                <action selector="reload" destination="7sb-eB-EZK" id="2XW-vJ-gtH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grZ-hy-bja" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1403" y="452"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="lQH-li-9jz">
+            <objects>
+                <viewController id="T21-uO-zH9" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccd-st-Mw8"/>
+                        <viewControllerLayoutGuide type="bottom" id="qTb-LX-Yho"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lRb-B9-hx2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1j-k1-vTu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="452"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6rd-Xe-Dds">
